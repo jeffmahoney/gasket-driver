@@ -143,10 +143,8 @@ void gasket_sysfs_init(void)
 {
 	int i;
 
-	for (i = 0; i < GASKET_SYSFS_NUM_MAPPINGS; i++) {
-		dev_mappings[i].device = NULL;
+	for (i = 0; i < GASKET_SYSFS_NUM_MAPPINGS; i++)
 		mutex_init(&dev_mappings[i].mutex);
-	}
 }
 
 int gasket_sysfs_create_mapping(struct device *device,
