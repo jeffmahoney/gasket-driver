@@ -1917,13 +1917,11 @@ static int __init gasket_init(void)
 {
 	int i;
 
-	mutex_lock(&g_mutex);
 	for (i = 0; i < GASKET_FRAMEWORK_DESC_MAX; i++)
 		mutex_init(&g_descs[i].mutex);
 
 	gasket_sysfs_init();
 
-	mutex_unlock(&g_mutex);
 	return 0;
 }
 
