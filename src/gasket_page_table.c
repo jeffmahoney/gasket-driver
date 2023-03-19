@@ -53,7 +53,7 @@
 #include <linux/version.h>
 #include <linux/vmalloc.h>
 
-#if __has_include(<linux/dma-buf.h>)
+#ifdef MODULE_IMPORT_NS
 MODULE_IMPORT_NS(DMA_BUF);
 #endif
 
